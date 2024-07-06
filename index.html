@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Youssef Barj - Instructional Designer</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root{--bg:#0a0a0a;--text:#fff;--accent:#00c8ff;--secondary:#ff3366}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:20px;text-align:center}
+nav{position:fixed;top:0;left:0;right:0;background:rgba(10,10,10,0.9);padding:20px 0;z-index:1000}
+.nav-container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.5rem;font-weight:700;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{color:var(--text);text-decoration:none;font-weight:600;font-size:1.1rem;transition:.3s}
+.nav-links a:hover{color:var(--accent)}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:100px 0}
+h1,h2{font-size:2.5rem;margin-bottom:20px}
+p{font-size:1.1rem;margin:0 auto 30px;max-width:600px}
+.btn,.project-btn{display:inline-block;background:var(--accent);color:var(--bg);padding:12px 24px;text-decoration:none;border-radius:30px;font-weight:600;transition:.3s;border:2px solid var(--accent);font-size:1rem;margin:10px;cursor:pointer}
+.btn:hover,.project-btn:hover{background:transparent;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;justify-items:center}
+.grid-item,.skill-card,.project-card,.timeline-content{background:rgba(255,255,255,0.1);border-radius:15px;padding:20px;transition:.3s}
+.grid-item:hover,.skill-card:hover,.project-card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,200,255,0.2)}
+.fas,.fab{color:var(--accent);font-size:2rem;margin-bottom:15px}
+.skills-container{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.skill-card{width:150px;height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.skill-card:hover{background:var(--accent);color:var(--bg)}
+.skill-card p{font-size:.9rem;font-weight:600;margin:0}
+.project-card{max-width:350px}
+.project-card img{width:100%;height:200px;object-fit:cover}
+.project-info h3{font-size:1.3rem;margin-bottom:10px;color:var(--accent)}
+.project-buttons{display:flex;justify-content:space-between;margin-top:15px}
+.modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;overflow:auto;background:rgba(0,0,0,0.8)}
+.modal-content{background:var(--bg);margin:15% auto;padding:20px;border:1px solid var(--accent);width:80%;max-width:700px;border-radius:10px}
+.close{color:var(--accent);float:right;font-size:28px;font-weight:bold;cursor:pointer}
+.close:hover{color:var(--secondary)}
+.timeline{position:relative;max-width:1200px;margin:0 auto}
+.timeline::after{content:'';position:absolute;width:6px;background:var(--accent);top:0;bottom:0;left:50%;margin-left:-3px}
+.timeline-item{padding:10px 40px;position:relative;width:50%}
+.timeline-item::after{content:'';position:absolute;width:25px;height:25px;right:-17px;background:var(--bg);border:4px solid var(--accent);top:15px;border-radius:50%;z-index:1}
+.left{left:0}
+.right{left:50%}
+.left::before,.right::before{content:'';height:0;position:absolute;top:22px;width:0;z-index:1}
+.left::before{right:30px;border:medium solid var(--accent);border-width:10px 0 10px 10px;border-color:transparent transparent transparent var(--accent)}
+.right::before{left:30px;border:medium solid var(--accent);border-width:10px 10px 10px 0;border-color:transparent var(--accent) transparent transparent}
+.right::after{left:-16px}
+</style>
+</head>
+<body>
+<nav>
+<div class="container nav-container">
+<a href="#home" class="logo">YB</a>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+<section id="home">
+  <div class="container">
+    <!-- Mug Shot Image -->
+    <img src="1691435719454.jpg" alt="Youssef Barj Mug Shot" style="width:200px; height:200px; border-radius:50%;">
+    <h1>Youssef Barj</h1>
+    <p>Innovative Instructional Designer & Techno-Pedagogical Engineer</p>
+    <a href="#skills" class="btn">Explore My Skills</a>
+    <a href="https://drive.google.com/uc?export=download&id=1qtRHtppvSElJZmMYGptYuNopge1--kjp" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
+  </div>
+</section>
+<section id="services">
+<div class="container">
+<h2>Services</h2>
+<div class="grid">
+<div class="grid-item"><i class="fas fa-chess-rook"></i><h3>Learning Strategy</h3><p>Well-thought-out design process to achieve your learning goals.</p></div>
+<div class="grid-item"><i class="fas fa-pencil-ruler"></i><h3>eLearning Design</h3><p>Conceptualising engaging learning experiences.</p></div>
+<div class="grid-item"><i class="fas fa-desktop"></i><h3>Development</h3><p>Creating solutions in various formats, from SCORM modules to websites.</p></div>
+</div>
+</div>
+</section>
+<section id="skills">
+<div class="container">
+<h2>Skills & Expertise</h2>
+<div class="skills-container">
+<div class="skill-card"><i class="fas fa-chalkboard-teacher"></i><p>Instructional Design</p></div>
+<div class="skill-card"><i class="fas fa-laptop-code"></i><p>E-Learning Development</p></div>
+<div class="skill-card"><i class="fas fa-server"></i><p>LMS Administration</p></div>
+<div class="skill-card"><i class="fas fa-tasks"></i><p>Project Management</p></div>
+<div class="skill-card"><i class="fas fa-gamepad"></i><p>Gamification</p></div>
+<div class="skill-card"><i class="fas fa-digital-tachograph"></i><p>TICE & Digital Learning</p></div>
+<div class="skill-card"><i class="fas fa-pencil-ruler"></i><p>Articulate 360</p></div>
+<div class="skill-card"><i class="fas fa-photo-video"></i><p>Adobe Creative Suite</p></div>
+<div class="skill-card"><i class="fas fa-graduation-cap"></i><p>Moodle & Open edX</p></div>
+<div class="skill-card"><i class="fas fa-film"></i><p>Video Editing</p></div>
+<div class="skill-card"><i class="fas fa-paint-brush"></i><p>UX/UI Design</p></div>
+<div class="skill-card"><i class="fas fa-code"></i><p>HTML, CSS, PHP</p></div>
+</div>
+</div>
+</section>
+<section id="projects">
+<div class="container">
+<h2>Featured Projects</h2>
+<div class="project-card">
+  <!-- Inserting the image here with the correct file name -->
+  <img src="1520078765767.jpg" alt="Gamified Cybersecurity Training" style="width:100%; height:auto;">
+  <div class="project-info">
+    <h3>Gamified Cybersecurity Training for Tesselate</h3>
+    <p>An interactive course designed to enhance cybersecurity awareness through gamification.</p>
+    <div class="project-buttons">
+      <button class="project-btn" onclick="openModal('videoModal')">Preview</button>
+      <button class="project-btn" onclick="openModal('aboutModal')">About</button>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section id="education">
+<div class="container">
+<h2>Education</h2>
+<div class="timeline">
+<div class="timeline-item left"><div class="timeline-content"><h3>Master in Education & Training Engineering and Techniques (ITEF)</h3><p>Faculté des Sciences Ben M'Sik, Casablanca (2023-2024)</p></div></div>
+<div class="timeline-item right"><div class="timeline-content"><h3>Bachelor's Degree in Education</h3><p>École Normale Supérieure de Casablanca (2020 - 2023)</p></div></div>
+</div>
+</div>
+</section>
+<section id="experience">
+<div class="container">
+<h2>Professional Experience</h2>
+<div class="timeline">
+<div class="timeline-item left"><div class="timeline-content"><h3>Training Manager - Tesselate</h3><p>Redesigned cybersecurity training, implemented LMS, and gamified onboarding trainings (6 months)</p></div></div>
+<div class="timeline-item right"><div class="timeline-content"><h3>E-Learning Designer - E-Learning Solutions Inc.</h3><p>Designed and developed a complete course using Articulate Rise 360 (3 months)</p></div></div>
+<div class="timeline-item left"><div class="timeline-content"><h3>Instructional Designer - Startup HopeZ</h3><p>Redesigned online courses and implemented gamification (2 months)</p></div></div>
+<div class="timeline-item right"><div class="timeline-content"><h3>Technopedagogy Project - Bruxelles Formation</h3><p>Created a quasi-chatbot for digital pedagogy topics (2 months)</p></div></div>
+</div>
+</div>
+</section>
+<footer id="contact">
+<div class="container">
+<h2>Let's Connect</h2>
+<p>Ready to create innovative learning experiences? Get in touch!</p>
+<a href="mailto:barjyoussef5@gmail.com" class="btn">Contact Me</a>
+<div class="social-links">
+    <a href="https://www.linkedin.com/in/youssefbarj" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <!-- Removed GitHub and Twitter links -->
+</div>
+</div>
+</footer>
+<div id="videoModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('videoModal')">&times;</span>
+<iframe width="100%" height="315" src="https://drive.google.com/file/d/1uF6D996ueL2uE0bdVBrZyJILJ6Aj8q8-/preview" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div id="aboutModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('aboutModal')">&times;</span>
+<h2>Phishing Training Course</h2>
+<p><strong>Objective:</strong> Educate participants on recognizing and responding to phishing attempts effectively.</p>
+<p><strong>Target Audience:</strong> Employees at all levels who need to enhance their cybersecurity awareness.</p>
+<h3>Key Topics:</h3>
+<ol>
+<li>Understanding Phishing: Definition, types, and examples.</li>
+<li>Recognizing Phishing Attempts: Key indicators and warning signs.</li>
+<li>Responding to Phishing: Steps to take if a phishing attempt is suspected.</li>
+<li>Preventative Measures: Best practices to avoid falling victim to phishing.</li>
+</ol>
+<h3>Unique Features:</h3>
+<ul>
+<li>Interactive guided tours and exercises to simulate real-life phishing scenarios.</li>
+<li>Immediate feedback on responses to help reinforce learning.</li>
+<li>Practical tips and tools for identifying and mitigating phishing threats.</li>
+</ul>
+<h3>Expected Outcomes:</h3>
+<p>Participants will be able to identify phishing attacks, respond appropriately, and implement best practices.</p>
+</div>
+</div>
+<script>
+function openModal(m){document.getElementById(m).style.display="block"}
+function closeModal(m){document.getElementById(m).style.display="none"}
+window.onclick=function(e){if(e.target.className==="modal")e.target.style.display="none"}
+</script>
+</body>
+</html>
